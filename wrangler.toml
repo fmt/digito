@@ -1,10 +1,9 @@
 name = "digito"
 main = "./index.js"
 workers_dev = false
-
 compatibility_date = "2024-04-03"
 
-route = { pattern = "*.digito.pt/*", zone_name = "" }
+route = { pattern = "*.digito.pt/*", zone_name = "digito.pt" }
 
 kv_namespaces = [
   { binding = "__arc", id = "73d9bd41b27f4fbb9a623c8cbfda600f" }
