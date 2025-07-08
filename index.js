@@ -82,7 +82,7 @@ async function handleRequest(req) {
 
   }
 
-  checkHash = checkHash.replace(/<head>/i, '<head>' + gtm + clarity)
+  checkHash = checkHash.replace(/<head>/i, '<head>' + clarity)
   checkHash = checkHash.replace(/http:\/\/dl.digito.pt/g, 'https://dl.digito.pt')
   checkHash = checkHash.replace(/<!-- ini pub -->([\s\S]*?)<!-- end pub -->|<!-- ini pub minibanner 120x60 -->([\s\S]*?)<!-- end pub minibanner 120x60 -->|<!footer!>([\s\S]*?)<!-end footer>|<!-- ini mailing-list -->([\s\S]*?)<!-- end mailing-list -->/gm, '')
 
