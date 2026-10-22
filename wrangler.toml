@@ -1,15 +1,32 @@
 name = "digito"
-main = "./index.js"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
 workers_dev = false
-compatibility_date = "2024-04-03"
 
 route = { pattern = "*.digito.pt/*", zone_name = "digito.pt" }
 
-kv_namespaces = [
-  { binding = "__arc", id = "73d9bd41b27f4fbb9a623c8cbfda600f" }
-]
+[observability]
+enabled = true
 
+[vars]
+ICO_TIMESTAMP = "20010720041445"
+
+[[kv_namespaces]]
+binding = "ARC"
+id = "73d9bd41b27f4fbb9a623c8cbfda600f"
+
+# Bindings and vars are NOT inherited by environments, so everything is repeated.
 [env.staging]
 name = "stg-digito"
 workers_dev = true
 
+[env.staging.observability]
+enabled = true
+
+[env.staging.vars]
+ICO_TIMESTAMP = "20010720041445"
+
+# TODO: replace with a staging-only namespace (wrangler kv namespace create ARC --env staging).
+[[env.staging.kv_namespaces]]
+binding = "ARC"
+id = "REPLACE_WITH_STAGING_KV_ID"
