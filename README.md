@@ -1,4 +1,10 @@
-# Projeto DIGITO.pt
+# Projet DIGITO.pt
+
+## What is DIGITO.pt
+
+digito.pt was a portuguese website and news portal about technology, telecoms, software, games and science, made by Prodigio late in the 1990s. It was then considered one of the biggest tech news sites in Portugal. It went dark along with Prodigio, but in 2025 I've recovered the domain and am building this project, recovering lost content from the Internet Archive database and allowing for search engines and AI engines to index it as one of the last "low-background steel" sites, in the words of Cloudflare ex-CTO John Graham-Cumming.
+
+## Project DIGITO
 
 Cloudflare Worker that serves the retired digito.pt website from the Internet Archive (Wayback Machine). The first request for a URL is fetched from archive.org, cleaned up and stored in Workers KV; every later request is served straight from KV.
 
